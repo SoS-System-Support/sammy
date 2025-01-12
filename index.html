@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samantha Collins Law Firm</title>
+    <link rel="icon" href="https://stevedimopoulos.com/wp-content/themes/yootheme/cache/5e/Samantha-Weathersby-610x547-1-5ef8e01e.webp">
+
+    <style>
+        
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #2c2c2c, #3a3a3a);
+            color: #e8e8e8;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #111;
+            color: #e8e8e8;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .firm-name {
+            font-weight: bold;
+            font-size: 1.5rem;
+            align-items: center;
+        }
+
+        header .menu {
+            position: relative;
+        }
+
+        header .menu-button {
+            background: none;
+            border: none;
+            color: #e8e8e8;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        header .dropdown {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #222;
+            color: #e8e8e8;
+            border: 1px solid #444;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        header .dropdown a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #e8e8e8;
+        }
+
+        header .dropdown a:hover {
+            background-color: #333;
+        }
+
+        header .menu:hover .dropdown {
+            display: block;
+        }
+
+        .password-screen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000000;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .password-screen h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #e8e8e8;
+        }
+
+        .password-screen input[type="password"] {
+            padding: 15px;
+            font-size: 1.2rem;
+            border: 1px solid #555;
+            border-radius: 8px;
+            background-color: #333;
+            color: #e8e8e8;
+            width: 300px;
+            margin-bottom: 15px;
+        }
+
+        .pass-logo {
+            width: 750px;
+            aspect-ratio: auto;
+        }
+
+        .password-screen button {
+            padding: 10px 25px;
+            font-size: 1rem;
+            background-color: #555;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .password-screen button:hover {
+            background-color: #777;
+        }
+
+        .hidden-content {
+            display: none;
+            padding: 20px;
+        }
+
+        .law-firm {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section {
+            margin: 40px 0;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            color: #00530c;
+            margin-bottom: 20px;
+        }
+
+        .attorneys, .paralegals {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .profile {
+            background: #333;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #111;
+            color: #e8e8e8;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .profile {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="password-screen">
+        <img src="logo_bk.png" alt="FirmLogo" class="pass-logo">
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>Hey love, enter the password.</h1>
+        <form id="password-form">
+            <input type="password" id="password" placeholder="Enter Password" required>
+            <br>
+            <button type="submit">Enter</button>
+        </form>
+    </div>
+
+    <div class="hidden-content">
+        <div class="law-firm">
+            <section>
+                <h2>Our Attorneys</h2>
+                <h1>TBD</h1>
+                <div class="attorneys" id="attorneys"></div>
+            </section>
+
+            <section>
+                <h2>Paralegals</h2>
+                <h1>TBD</h1>
+                <div class="paralegals" id="paralegals"></div>
+            </section>
+
+            <section>
+                <h2>Practice Areas</h2>
+                <ul>
+                    <li>Personal Injury</li>
+                    <li>Heart Theft</li>
+                    <li>My Beautiful and ever loving Husband Chris.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Contact Us</h2>
+                <p>Email: info@samanthacollins.com</p>
+                <p>Phone: +1W1LL691FW4N73D</p>
+                <p>Address: 1609 Thoracic cavity, Within the Mediastinum, Your Husband, USA</p>
+            </section>
+        </div>
+    </div>
+
+ 
+
+    <script>
+        const password = "v";
+
+        document.getElementById("password-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const input = document.getElementById("password").value;
+
+            if (input === password) {
+                document.querySelector(".password-screen").style.display = "none";
+                document.querySelector(".hidden-content").style.display = "block";
+            } else {
+                alert("Try again love, if you need help, text me.");
+            }
+        });
+
+
+        function displayProfiles(profiles, containerId) {
+            const container = document.getElementById(containerId);
+            profiles.forEach(profile => {
+                const profileCard = document.createElement("div");
+                profileCard.classList.add("profile");
+                profileCard.innerHTML = `
+                    <img src="${profile.img}" alt="${profile.name}">
+                    <h3>${profile.name}</h3>
+                    <p>${profile.title}</p>
+                `;
+                container.appendChild(profileCard);
+            });
+        }
+
+        displayProfiles(attorneys, "attorneys");
+        displayProfiles(paralegals, "paralegals");
+    </script>
+
+<!----I LOVE YOU SAMMY------>
+</body>
+</html>
